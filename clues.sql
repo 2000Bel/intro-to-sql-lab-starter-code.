@@ -18,7 +18,7 @@ SELECT countries.name FROM countries JOIN countrylanguages ON countries.code = c
 
 -- Clue #4: We're booking the first flight out – maybe we've actually got a chance to catch her this time. There are only two cities she could be flying to in the country. One is named the same as the country – that would be too obvious. We're following our gut on this one; find out what other city in that country she might be flying to. 
 
-SELECT name FROM cities WHERE countrycode = (SELECT code FROM countries WHERE name = 'Italy') AND name != 'Italy';
+SELECT name FROM cities WHERE countrycode = (SELECT code FROM countries WHERE name = 'San Marino') AND name != 'San Marino';
 
 ---Answer: Roma Milano
 
@@ -49,6 +49,6 @@ SELECT name FROM cities WHERE id = (SELECT capital FROM countries WHERE name = '
 
 -- We're counting on you, gumshoe. Find out where she's headed, send us the info, and we'll be sure to meet her at the gates with bells on.
 
-SELECT name, countrycode FROM cities WHERE population = 91085;
+SELECT name, countrycode FROM cities WHERE population = 91084;
 
 ---Answer: 
